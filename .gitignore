@@ -1,0 +1,51 @@
+# Literature / PDFs
+literature/
+*.pdf
+*.pptx
+
+# Metadata (keep local until ready to share)
+FRESH_metadata/
+
+# OS files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Conda / environments
+.conda/
+*.egg-info/
+
+# Large data files (sequencing reads, databases to be downloaded)
+databases/cpn60/*.fasta
+databases/cpn60/*.qza
+databases/pheS/*.fasta
+databases/pheS/*.qza
+databases/ITS/*.fasta
+databases/ITS/*.qza
+databases/16S/*.fasta
+databases/16S/*.qza
+validation/public_data/*.fastq*
+validation/public_data/*.sra
+
+# QIIME2 artifacts (large)
+*.qzv
+*.qza
+
+# Claude Code internal
+.claude/
+
+# Temporary files
+*.tmp
+*.log
+*.swp
+*~

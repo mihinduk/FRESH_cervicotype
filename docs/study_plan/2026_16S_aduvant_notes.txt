@@ -1,0 +1,30 @@
+2026_16S_aduvant_notes:
+
+Possibilities:
+- cpn60 / GroEL / hs[60
+  - Dr Janet Hill (U Saskatchewan)
+  ** cpnDB ** 25,000+ seq; manually curated
+  - single copy MOST bacteria
+  - tools: CpnClassiPhyR for ASV classification; mPUMA for assembly
+  - Limitation: Mollicutes (Mycoplasma, Ureaplasma) lack cpn60 entirely — requires supplementary PCR. Smaller database than 16S. Some paralogs in Chlamydia/Actinobacteria.
+
+- ** can use RDP classifier trained on cpn60 **
+
+
+NOT yet tested in vaginal communities:
+- rpoB (RNA polymerase beta subunit)
+ - Ogier 45,000 seq database
+ - requires primer cocktails
+
+- pheS (phenylalanyl-tRNA synthase)
+  - single copy
+  - lactobacillus specific
+
+- full rrn operon (16S-ITS-23S) ~4,500 bp -> platform = Nanopoer or PacBio HiFi
+
+NOTE: 5S rRNA is NOT a good option.  Carl Woese himself considered and abandoned 5S rRNA for molecular phylogenetics due to insufficient information content. No vaginal microbiome study has ever used it. It has value only as part of the complete rrn operon on long-read platforms.
+
+  1. cpn60 as primary community marker — proven in vaginal studies, resolves Gardnerella species (the most critical gap), resolves Prevotella, universal primers exist
+  2. pheS as supplementary Lactobacillus-specific marker — best-in-class resolution for the dominant genus
+  3. Supplementary Mycoplasma/Ureaplasma-specific PCR — fills the cpn60 Mollicute blind spot
+  4. Consider full rrn operon on Nanopore as an alternative single-marker approach if long-read infrastructure is available

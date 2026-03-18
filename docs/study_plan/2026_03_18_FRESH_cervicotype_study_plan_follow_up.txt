@@ -1,0 +1,198 @@
+2026_03_18_FRESH_cervicotype_study_plan_follow_up:
+
+Your goal now is to:
+  1. Define rationale and strategy
+  2. Build/modify databases and tools
+  3. Find existing public data to test them
+  4. Be ready when FRESH samples arrive
+
+  Proposed rationale (for grants/papers)
+
+  One-sentence framing: Standard 16S-based cervicovaginal community typing cannot resolve the species-level variation within diverse (non-Lactobacillus) communities that dominate in sub-Saharan African women,
+   and this resolution gap obscures the biological mechanisms linking specific bacterial species, fungi, and Mollicutes to HIV acquisition risk.
+
+  The gap we fill: Gosmann et al. (2017) showed CT3/CT4 communities carry 4x HIV risk in FRESH — but 58% of the cohort falls into these two catch-all categories. We don't know which specific species within
+  CT3/CT4 drive the risk because 16S can't resolve them. No single marker can fill this gap alone — but an integrated multi-marker approach can.
+
+  What makes this study unique: The intersection of five elements that no other group combines:
+
+  ┌───────────────────────────────────────────────────┬──────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │                      Element                      │               What it provides               │                                            Why it matters                                            │
+  ├───────────────────────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ Multi-marker molecular resolution (16S + cpn60 +  │ Species-level resolution across bacteria,    │ 16S alone misses Gardnerella species, lumps Prevotella, underdetects Mollicutes, and ignores fungi.  │
+  │ pheS + ITS + Mollicute-specific PCR)              │ fungi, and Mollicutes simultaneously         │ Each marker fills a specific blind spot of the others                                                │
+  ├───────────────────────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ African population                                │ Community structures absent from Western     │ 58% of FRESH women fall into CST-IV — the least resolved category. SA-specific cervicotypes likely   │
+  │                                                   │ reference frameworks                         │ exist but have never been defined at species level                                                   │
+  ├───────────────────────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ HIV outcome data                                  │ Prospective seroconversion events in a       │ Directly links species-resolved cervicotypes to HIV acquisition — the clinical endpoint that matters │
+  │                                                   │ high-incidence cohort                        │  most in this population                                                                             │
+  ├───────────────────────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ Longitudinal design                               │ Temporal dynamics — transitions between      │ Snapshots miss the trajectory. Which species-level transitions precede seroconversion? Is            │
+  │                                                   │ cervicotypes over months                     │ cervicotype stability protective regardless of type?                                                 │
+  ├───────────────────────────────────────────────────┼──────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ Paired sample types                               │ Vaginal + cervical eSwabs from the same      │ HIV infection occurs at the cervical transformation zone — the endocervical microbiome may predict   │
+  │                                                   │ women                                        │ risk better than the vaginal microbiome, but nobody has tested this with species-level resolution    │
+  └───────────────────────────────────────────────────┴──────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  The logic chain that connects everything:
+
+  Multi-marker profiling (cpn60 + pheS + ITS + Mollicute PCR)
+      → Species-level cervicotype definition for SA women
+          → Identify which species within CT3/CT4 drive genital inflammation
+              → Link specific species/cervicotypes to HIV acquisition
+                  → Longitudinal tracking reveals transition dynamics
+                      → Targetable intervention points (which transitions to block)
+
+  Each marker has a defined role in this chain:
+
+  ┌───────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │        Marker         │                                                                                Role in the chain                                                                                │
+  ├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 16S                   │ Baseline comparator; links to existing FRESH data (Gosmann et al.); VALENCIA classification; total bacterial load denominator                                                   │
+  ├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ cpn60                 │ Primary community profiler — resolves Gardnerella species, Prevotella species, and most vaginal anaerobes at species level                                                      │
+  ├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ pheS                  │ Lactobacillus zoom lens — determines whether SA L. iners strains differ from Western strains; resolves whether L. iners dominance is protective or not in this population       │
+  ├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ITS                   │ Fungal dimension — captures Candida-bacterial interactions and Malassezia enrichment in BV that standard bacterial profiling misses entirely                                    │
+  ├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ Mollicute-specific    │ Fills the cpn60 blind spot — M. genitalium (independent HIV risk factor), M. hominis (81% in HIV+ SA women), Ureaplasma spp. are invisible to both 16S and cpn60 universal      │
+  │ PCR                   │ primers                                                                                                                                                                         │
+  └───────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  Significance statement: This is the first study to apply integrated multi-kingdom, multi-marker molecular profiling at species-level resolution to a longitudinal African cohort with HIV outcome data. It
+  will define the species-level cervicovaginal community structures specific to young South African women, determine which specific bacterial and fungal species drive HIV acquisition risk, and establish a
+  classification framework that can replace the Western-derived CST system for sub-Saharan African populations.
+
+  Revised strategy: The three layers
+
+  ┌─────────────────┬─────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────┬──────────────────────────────────────┐
+  │      Layer      │                     Purpose                     │                                           Method                                            │             Dependencies             │
+  ├─────────────────┼─────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┼──────────────────────────────────────┤
+  │ 1. Discovery    │ Full species-level community profiling across   │ cpn60 sequencing (primary), pheS sequencing (Lactobacillus), ITS sequencing (fungi), 16S    │ Databases + pipelines built and      │
+  │                 │ bacteria + fungi                                │ sequencing (comparator/baseline) on a subset (~100-200 samples)                             │ validated                            │
+  ├─────────────────┼─────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┼──────────────────────────────────────┤
+  │ 2.              │ Define SA-specific cervicotypes with            │ Cluster cpn60 profiles de novo; define centroids; layer pheS/ITS/Mollicute data; compare to │ Discovery data in hand               │
+  │ Classification  │ species-level resolution; extend VALENCIA       │  VALENCIA assignments from 16S                                                              │                                      │
+  ├─────────────────┼─────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────┼──────────────────────────────────────┤
+  │ 3. Translation  │ Quantitative cervicotyping deployable at scale  │ Multiplex qPCR panel (~18-19 targets) informed by discovery results; applied to full FRESH  │ Classification identifies the key    │
+  │                 │                                                 │ cohort with longitudinal + HIV outcome linkage                                              │ discriminating species               │
+  └─────────────────┴─────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────┴──────────────────────────────────────┘
+
+  What we build now (before samples): Everything in Layer 1 that doesn't require FRESH data — databases, classifiers, pipelines, validated on public data.
+
+  ---
+  Revised bioinformatics build plan
+
+  Phase 1: Database assembly (weeks 1-3)
+
+  ┌────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬─────────────────────────────────┬────────────┐
+  │        Task        │                                                               Action                                                                │             Output              │   Status   │
+  ├────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┼────────────┤
+  │ 1a. cpn60          │ Download cpn60-Classifier v11.1 from GitHub (16,413 sequences); contact Hill lab re: cpnDB_nr_vag + VOGUE reference; use GitHub     │ Local cpn60 reference + trained │ Ready to   │
+  │                    │ version as starting point                                                                                                           │  RDP classifier                 │ start      │
+  ├────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┼────────────┤
+  │ 1b. pheS           │ Download Wuyts et al. 445-sequence framework from AEM supplementary; query NCBI GenBank for additional L.                           │ Custom pheS reference database  │ Ready to   │
+  │                    │ iners/crispatus/gasseri/jensenii pheS (especially African isolates); format as FASTA + taxonomy                                     │                                 │ start      │
+  ├────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┼────────────┤
+  │ 1c. pheS           │ Train RDP Naive Bayesian classifier on pheS reference (same method Ren & Hill 2023 used for cpn60); validate with leave-one-out     │ pheS classifier for QIIME2 or   │ After 1b   │
+  │ classifier         │                                                                                                                                     │ standalone                      │            │
+  ├────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┼────────────┤
+  │ 1d. ITS/UNITE      │ Download UNITE v10.0 pre-trained QIIME2 classifier from UNITE                                                                       │ ITS classifier ready            │ Ready to   │
+  │                    │                                                                                                                                     │                                 │ start      │
+  ├────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┼────────────┤
+  │ 1e. 16S/SILVA      │ Download latest SILVA or Greengenes2 QIIME2 classifier; also download VALENCIA centroids + scripts from GitHub                      │ 16S classifier + VALENCIA ready │ Ready to   │
+  │                    │                                                                                                                                     │                                 │ start      │
+  ├────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┼────────────┤
+  │ 1f. Mollicute      │ Compile primer sequences from literature (MgPa: Jensen et al.; M. hominis 16S; ureC: Kong et al. 2000); build in silico validation  │ Primer database + expected      │ Ready to   │
+  │ primers            │ reference                                                                                                                           │ amplicons                       │ start      │
+  ├────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────┼────────────┤
+  │ 1g. Fredricks BV   │ Compile BVAB1, BVAB2, Megasphaera type 1, Fannyhessea primer sequences from Fredricks et al. 2007 (Table 1, PMC2045326)             │ BV indicator primer reference   │ Ready to   │
+  │ targets            │                                                                                                                                     │                                 │ start      │
+  └────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴─────────────────────────────────┴────────────┘
+
+  Phase 2: Pipeline construction (weeks 2-4)
+
+  ┌────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬────────────────────────────────────┐
+  │        Task        │                                                                  Action                                                                  │               Output               │
+  ├────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
+  │ 2a. cpn60 pipeline │ Raw reads → quality filter → DADA2 (ASV calling) → cpn60-Classifier (RDP, v11.1) → taxonomy table + abundance matrix                     │ Working cpn60 analysis pipeline    │
+  ├────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
+  │ 2b. pheS pipeline  │ Raw reads → quality filter → DADA2 → custom pheS RDP classifier → taxonomy table                                                         │ Working pheS pipeline              │
+  ├────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
+  │ 2c. ITS pipeline   │ Raw reads → ITSxpress v2 (trim conserved flanks) → DADA2 (customized: Rivers et al. 2022 parameters) → UNITE classifier → taxonomy table │ Working ITS pipeline               │
+  ├────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
+  │ 2d. 16S pipeline   │ Raw reads → DADA2 → SILVA/GG2 classifier → taxonomy table → VALENCIA cervicotype assignment                                              │ Working 16S + VALENCIA pipeline    │
+  ├────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
+  │ 2e. Integration    │ Merge all marker outputs per sample; unified taxonomy table; alpha/beta diversity; cervicotype assignment; visualization                 │ Multi-marker integration framework │
+  └────────────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────────────────────────────────┘
+
+  Phase 3: Validation with public data (weeks 3-6)
+
+  ┌──────────────┬───────────────────────────────────────────────────┬──────────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │   Priority   │                      Dataset                      │        SRA/Source        │                                               What it tests                                               │
+  ├──────────────┼───────────────────────────────────────────────────┼──────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 1 (critical) │ Kyongo et al. 2023 — Kenyan vaginal cpn60, 41     │ Check paper for SRA      │ cpn60 pipeline on African samples; Gardnerella subgroup resolution; direct comparison to published        │
+  │              │ women, 362 samples                                │ accession                │ results (Hill lab co-authored)                                                                            │
+  ├──────────────┼───────────────────────────────────────────────────┼──────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 2 (critical) │ Gosmann et al. 2017 — FRESH 16S V4 data           │ SRA accession in paper   │ 16S pipeline; VALENCIA classification of FRESH; quantify how many samples are unclassifiable; baseline    │
+  │              │                                                   │                          │ for comparison when cpn60 data arrives                                                                    │
+  ├──────────────┼───────────────────────────────────────────────────┼──────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 3            │ Albert et al. 2015 or Chaban et al. 2014 —        │ SRA accession in papers  │ cpn60 pipeline validation on well-characterized Western samples; compare classifier output to published   │
+  │ (important)  │ Canadian vaginal cpn60                            │                          │ community profiles                                                                                        │
+  ├──────────────┼───────────────────────────────────────────────────┼──────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 4            │ Wuyts et al. 2021 — pheS amplicon from fermented  │ Supplementary / SRA      │ pheS pipeline + classifier validation (not vaginal, but tests the bioinformatics)                         │
+  │ (important)  │ food                                              │                          │                                                                                                           │
+  ├──────────────┼───────────────────────────────────────────────────┼──────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 5 (useful)   │ VALENCIA training data                            │ GitHub (13,160 profiles) │ Test VALENCIA on non-US data; confirm failure rate; identify which centroids SA samples cluster nearest   │
+  │              │                                                   │                          │ to                                                                                                        │
+  ├──────────────┼───────────────────────────────────────────────────┼──────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ 6 (useful)   │ Rowley et al. 2024 — Fiji metagenomic data        │ SRA accession in paper   │ Test whether SA-derived cervicotypes also classify Fijian samples better than VALENCIA (generalizability) │
+  └──────────────┴───────────────────────────────────────────────────┴──────────────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  ---
+  Revised questions for you
+
+  Computational setup
+
+  1. Where will computation run? HTCF (login.htcf.wustl.edu, user mihindu, scratch at /scratch/sahlab/kathie/)? Or local? This determines conda environment setup, job submission scripts, and storage paths.
+- HTCF - we can use conda or singularity
+
+  2. QIIME2 or standalone pipelines? QIIME2 provides a unified framework for all four markers (cpn60, pheS, ITS, 16S) using the same commands — just swap the classifier. Standalone (DADA2 in R + command-line
+  RDP classifier) is more flexible but less integrated. I'd recommend QIIME2 given you're running four different marker types through the same workflow. Your preference?
+- Is QIIME2 better OR could we do RDP-based?  Why would we choose QIIME2 over RDP for classification?
+
+  3. R or Python for downstream analysis? Your FRESH metadata is in RDS files (R), and your existing scripts use R + ggplot2. Phyloseq (R) is the standard for microbiome analysis. I'd suggest keeping the
+  downstream in R. Agree?
+- The metadata analysis is preliminary analysis by a colleague.  It should not constrain us.  We should use which ever tool will be better (more efficient, better results) for this project.
+
+  Data access
+
+  4. Gosmann et al. 2017 raw data — do you already have the FRESH 16S sequencing data locally, or do I need to locate the SRA accession and download it?
+- Please locate the SRA.  We will store it on lts: htcf:/lts/sahlab/data4/DATA_DOWNLOADS_3/fresh_cervicotypes and work on it in scratch: htcf: /scratch/sahlab/kathie/fresh_cervicotype_analysis
+
+  5. Hill lab contact — have you or collaborators already reached out to Dr. Hill? The GitHub cpn60-Classifier is publicly available and we can start immediately, but cpnDB_nr_vag and the VOGUE reference may
+  require direct access. Should I draft a collaboration email for you?
+  6. Ravel lab contact — same question. VALENCIA is open-source, but a formal collaboration to extend it with FRESH data would strengthen the publication. Should I draft an outreach summary?
+
+  Study design
+
+  7. Sample selection for the discovery subset — how will you choose the ~100-200 samples for multi-marker sequencing? Options:
+    - Stratified by Gosmann cervicotype (CT1-CT4) to ensure representation of all types
+    - Enriched for CT3/CT4 (since that's where the resolution gap is)
+    - Include matched pre-seroconversion samples from women who acquired HIV
+    - Include paired vaginal + cervical swabs
+    - All of the above (if sample numbers allow)
+  8. The "Scott" discussion item from your study plan — "What sample type — vaginal vs. cervical vs. both? We have both - will we use both? interchangeably? contrast results?" Has this been decided?
+
+  Prioritization
+
+  9. What should I start building first? My recommended order:
+    - First: cpn60 database + classifier (critical path; longest to validate)
+    - Second: 16S pipeline + VALENCIA (needed to reprocess Gosmann data and quantify the gap)
+    - Third: pheS database + classifier (novel build; no precedent to follow)
+    - Fourth: ITS pipeline (most off-the-shelf; UNITE classifier is pre-built)
+    - Parallel: Locate and download all public datasets (SRA accessions)
+
+  Does this priority order make sense, or would you reorder?

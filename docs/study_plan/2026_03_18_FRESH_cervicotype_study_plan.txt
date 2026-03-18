@@ -1,0 +1,89 @@
+2026_03_18_FRESH_cervicotype_study_plan:
+
+htcf:
+cd /lts/sahlab/data4/DATA_DOWNLOADS_3/fresh_cervicotypes
+cd /scratch/sahlab/kathie/fresh_cervicotype_analysis
+
+
+PLAN:
+A.  Overview
+1.  intersection: (16S + cpn60 + ITS + pheS + Mycoplasma) resolution + African population + HIV outcome data + longitudinal design -> highlight this in significance and relate all plans to this
+2.  Classifier: RDP or Qiime trained?
+
+B.  pheS: Lactobacillus
+1.  Build a pheS database: Wuyts supplemental material -> turn into database; can we add from NCBI?  Can we check their primers against any pheS genes in NCBI from South Africa or Africa
+2.  Classifier: Blastn OR can an existing classifier be trained on pheS (CpnClassiPhyR or other - RDP)?
+-   Gap: There's no pheS equivalent of QIIME2's pre-trained classifiers or CpnClassiPhyR. You'd need to build a custom BLAST or naive Bayes classifier trained on the Wuyts reference set. This is straightforward but requires some bioinformatics setup.
+3.  Additional primers?
+
+C.  cpn60: 
+1.  Download current curated database:
+- research-groups.usask.ca/hilllab/cpndb.php -> fasta
+- cpnDB_nr_vag  Vaginal-specific reference set 
+- VOGUE Reference urated OTU set assembled de novo from 546 vaginal microbiomes, labelled by nearest neighbour in cpnDB_nr - Gold standard for vaginal cpn60 community profiling
+** NOTE: need to contact as the db is under construction ** - get github version now
+- Collaboration with Hill lab - access to the latest unpublished reference sets and ensure any novel sequences you find get incorporated back into cpnDB?
+
+D.  Mycoplasma:
+  ┌────────────────┬─────────────────────────────┬─────────────────────────────┬───────────────────────────────────────────────────┐
+  │     Target     │            Gene             │        Primer source        │                     Rationale                     │
+  ├────────────────┼─────────────────────────────┼─────────────────────────────┼───────────────────────────────────────────────────┤
+  │ M. genitalium  │ MgPa adhesin                │ Jensen et al. (widely used) │ Independent HIV risk factor; 10% prevalence in SA │
+  ├────────────────┼─────────────────────────────┼─────────────────────────────┼───────────────────────────────────────────────────┤
+  │ M. hominis     │ 16S rRNA (species-specific) │ Multiple validated sets     │ 81% in HIV+ SA women; BV synergy; HIV shedding    │
+  ├────────────────┼─────────────────────────────┼─────────────────────────────┼───────────────────────────────────────────────────┤
+  │ U. parvum      │ ureC (species-specific)     │ Kong et al. 2000            │ Dominant Ureaplasma species; 77% in SA HIV+ women │
+  ├────────────────┼─────────────────────────────┼─────────────────────────────┼───────────────────────────────────────────────────┤
+  │ U. urealyticum │ ureC (species-specific)     │ Kong et al. 2000            │ Less common but more pathogenic                   │
+  └────────────────┴─────────────────────────────┴─────────────────────────────┴───────────────────────────────────────────────────┘
+
+E.  Core panel:
+  ┌───────────────────┬──────────────────────────────────────────────────────┬─────────────────────────┐
+  │     Category      │                       Targets                        │       Marker gene       │
+  ├───────────────────┼──────────────────────────────────────────────────────┼─────────────────────────┤
+  │ Lactobacillus (4) │ L. crispatus, L. iners, L. gasseri, L. jensenii      │ cpn60 or pheS           │
+  ├───────────────────┼──────────────────────────────────────────────────────┼─────────────────────────┤
+  │ Gardnerella (3)   │ G. vaginalis, G. piotii, G. swidsinskii              │ cpn60                   │
+  ├───────────────────┼──────────────────────────────────────────────────────┼─────────────────────────┤
+  │ Mollicutes (4)    │ M. genitalium, M. hominis, U. parvum, U. urealyticum │ MgPa, 16S, ureC         │
+  ├───────────────────┼──────────────────────────────────────────────────────┼─────────────────────────┤
+  │ BV indicator (1)  │ Fannyhessea vaginae                                  │ 16S (species-specific)  │
+  ├───────────────────┼──────────────────────────────────────────────────────┼─────────────────────────┤
+  │ Denominators (2)  │ Total bacteria + human gene                          │ Universal 16S + RNase P │
+  ├───────────────────┼──────────────────────────────────────────────────────┼─────────────────────────┤
+  │ Total             │ ~14 targets                                          │                         │
+  └───────────────────┴──────────────────────────────────────────────────────┴─────────────────────────┘
+
+F.  Fungal:
+
+Primer pair	Region 	Amplicon size		Platform 	Pros	Cons
+ITS1F / ITS2	ITS1	~250-400 bp (variable)	Illumina MiSeq	Earth Microbiome Project standard; most published data uses this; fungal-specific (ITS1F excludes most plants)	Variable amplicon length complicates DADA2; some taxa missed            
+
+  Databases
+
+  ┌───────────────────────┬───────────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────┐
+  │       Database        │                            Content                            │                          Size                           │                          Use                          │
+  ├───────────────────────┼───────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────┤
+  │ UNITE                 │ The ITS reference database; formal fungal barcode sequences;  │ 3.85 million ITS sequences; 239,180 species hypotheses  │ Taxonomic classification of ITS amplicons; integrated │	***
+  │                       │ Species Hypotheses (SHs) with DOIs                            │ (v10.0, updated 2025-12-10)                             │  with QIIME2, DADA2, mothur                           │
+  ├───────────────────────┼───────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────┤
+  │ UNITE+INSD            │ UNITE merged with International Nucleotide Sequence Database  │ Comprehensive — mirrors all public ITS from             │ Broadest coverage                                     │
+  │                       │                                                               │ GenBank/ENA/DDBJ                                        │                                                       │
+  ├───────────────────────┼───────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────┤
+  │ NCBI/GenBank          │ All deposited ITS sequences                                   │ Millions; uncurated                                     │ Raw sequence retrieval                                │
+  ├───────────────────────┼───────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────┤
+  │ RefSeq Targeted Loci  │ NCBI curated fungal ITS/LSU                                   │ Smaller, high quality                                   │ Type strain confirmation                              │
+  │ (fungi)               │                                                               │                                                         │                                                       │
+  ├───────────────────────┼───────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────┤
+  │ Mycobank              │ Fungal nomenclature + sequences                               │ Nomenclatural authority                                 │ Species name validation                               │
+  └───────────────────────┴───────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────┘
+
+UNITE database v10.0 - Can I create RDP-based classifier for this?
+
+***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** 
+***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** 
+
+Discuss with Scott:
+1. What sample type — vaginal vs. cervical vs. both?
+- We have both - will we use both? interchangeably? contrast results?
+
