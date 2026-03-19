@@ -94,3 +94,25 @@ targets) remains essential for detecting M. hominis and Ureaplasma in FRESH samp
 - Vaneechoutte, M. et al. (2019). Emended description of Gardnerella vaginalis and description of G. leopoldii, G. piotii, G. swidsinskii. IJSEM, 69(3), 679-687.
 - Paramel Jayaprakash, T. et al. (2012). Resolution and characterization of distinct cpn60-based subgroups of Gardnerella vaginalis. PLoS ONE, 7(8), e43009.
 - Schuyler, J.A. et al. (2016). Identification of Gardnerella vaginalis subgroup distribution by cpn60. PLoS ONE, 11(1), e0146510.
+
+## L. jensenii Supplementation (2026-03-19)
+
+cpnDB v11.1 contained only 3 L. jensenii cpn60 sequences. To improve CST-V
+classification confidence, 8 additional L. jensenii cpn60 UT sequences were
+extracted from NCBI:
+
+- 5 from direct NCBI nucleotide deposits (552bp UT fragments)
+- 3 extracted from complete genomes via reference-anchored in silico PCR
+  (using AY608421.1 as reference, 25bp anchors at each end, 3 mismatch tolerance)
+
+Source accessions: FJ577623.1, FJ577617.1, FJ577600.1, FJ577568.1, FR775916.1,
+CP160086.1, CP046310.1, VYVV01000033.1
+
+Stored in: ljensenii_supplement.fasta (8 sequences)
+
+**Updated L. jensenii count: 3 (cpnDB) + 8 (supplement) = 11 total**
+This is comparable to L. crispatus (9) and L. gasseri (10) representation.
+
+Note: These supplemental sequences need to be merged into the classifier
+training set and the classifier retrained before use. The pre-trained
+cpn60_classifier_v11.qza does NOT include these supplements.
