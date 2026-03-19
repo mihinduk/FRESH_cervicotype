@@ -47,6 +47,23 @@ cpn60 subgroup assignments from Paramel Jayaprakash et al. 2012):
 - G. leopoldii: 4 sequences
 - Gardnerella genome sp. 2, 3, 7, 8, 9, 10, 11, 12, 13: 19 sequences across 9 genomospecies
 
+**Genomospecies-to-species name mapping (Vaneechoutte et al. 2019):**
+cpnDB v11.1 uses formal species names, not genomospecies numbers. The following
+aliases are equivalent — both appear in the literature and cause confusion:
+
+| Genomospecies | Named Species | cpn60 Subgroup | Clade | In cpnDB as |
+|---------------|---------------|----------------|-------|-------------|
+| GS1 (sensu stricto) | G. vaginalis | Subgroup C | Clade 1 | G. vaginalis (16 seqs) |
+| GS2 | (multiple genomospecies) | Subgroup D | Clade 3 | Gardnerella genome sp. 2 (3 seqs) |
+| GS3 | (not yet named) | Subgroup D | Clade 3 | Gardnerella genome sp. 3 (6 seqs) |
+| **GS4** | **G. piotii** | **Subgroup B** | **Clade 2** | **G. piotii (7 seqs)** |
+| **GS5** | **G. leopoldii** | **Subgroup A** | **Clade 4** | **G. leopoldii (4 seqs)** |
+| **GS6** | **G. swidsinskii** | **Subgroup A** | **Clade 4** | **G. swidsinskii (5 seqs)** |
+| GS7-13 | (not yet named) | Various | Various | Gardnerella genome sp. 7-13 |
+
+**Note:** GS4/5/6 do NOT appear as "genome sp. 4/5/6" in cpnDB because they were
+renamed to their formal species names. This is correct and expected — not a gap.
+
 ## Mollicute coverage — NUANCED
 
 The database contains **82 Mollicute entries**, including:
