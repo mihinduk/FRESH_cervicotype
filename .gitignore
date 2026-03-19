@@ -49,3 +49,20 @@ validation/public_data/*.sra
 *.log
 *.swp
 *~
+
+# cpn60-Classifier cloned repo (use release assets instead)
+databases/cpn60/cpn60-Classifier/
+
+# Large binary/compressed files
+*.tar.gz
+
+# macOS resource fork files
+._*
+
+# RDP trained model files (large)
+**/v11_training_files/
+**/v10_training_files/
+
+# QIIME2 classifier artifacts and large FASTA
+**/cpn60-q2-feature-classifier-v11/
+**/cpn60-Classifier_v11.0_training/refseqs_v11.fasta
