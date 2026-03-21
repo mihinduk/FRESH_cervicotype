@@ -142,13 +142,29 @@ Use the QIIME2 classifier or RDP trained model. Do NOT use 16S-trained classifie
 
 **Purpose:** Standard marker for comparison with existing literature, VIRGO2 CST assignment, total bacterial load.
 
-**Status:** NOT YET SET UP — Step 1d next
+**Status:** COMPLETE (classifiers downloaded, VIRGO2 cloned, database pending)
 
-### Planned
+### Key files
 
-- SILVA v138.2 or Greengenes2 pre-trained QIIME2 classifier
-- VIRGO2 for CST assignment: https://github.com/kwondry/virgo2_mapping_and_taxonomy
-- Links to existing Gosmann et al. 2017 FRESH 16S data at ENA PRJEB14858
+| File | Path | Contents |
+|------|------|----------|
+| **SILVA 138 classifier** | `16S/silva/silva-138-99-nb-classifier.qza` | Full-length 99% OTUs, sklearn 1.4.2, 209MB |
+| **Greengenes2 V4 classifier** | `16S/silva/gg2-2024.09-v4-nb-classifier.qza` | 515F/806R V4 region, sklearn 1.4.2, 47MB |
+| **VIRGO2 pipeline** | `16S/virgo2/` | Snakemake workflow for CST assignment (cloned repo) |
+| Documentation | `16S/DATABASE_SUMMARY.md` | Full details incl. VIRGO2 setup instructions |
+
+### Limitations
+
+- VIRGO2 database files NOT yet downloaded — requires Dropbox link from Michael France at Ravel lab. After publication will be on Zenodo.
+- Primer choice for new FRESH 16S: 515F/806R (Gosmann) vs 341F/805R (Ravel lab) — decision needed.
+- 16S copy number variation biases abundance — cpn60 is more accurate for quantification.
+- 16S cannot resolve Gardnerella or Prevotella to species level.
+
+### Existing FRESH 16S data
+
+- Gosmann et al. 2017: ENA PRJEB14858
+- Kwon lab follow-up: NCBI PRJNA738803
+- FRESH LACTIN-V trial: NCBI PRJNA1085249
 
 ---
 
@@ -208,6 +224,7 @@ Use the QIIME2 classifier or RDP trained model. Do NOT use 16S-trained classifie
 | Extract pheS from 472 WGS genomes for outgroup enrichment | Medium | BLAST installation |
 | Download raw UNITE FASTA + taxonomy | Low | Only if retraining needed |
 | Contact Hill lab for cpnDB\_nr\_vag + VOGUE reference | Medium | Scott approval |
-| Set up 16S SILVA + VIRGO2 | **Next** | — |
+| Set up 16S SILVA + VIRGO2 | ~~Next~~ **DONE** | Classifiers downloaded, VIRGO2 cloned, DB pending Ravel lab |
+| Obtain VIRGO2 database files | High | Contact Michael France / Ravel lab for Dropbox link |
 | Compile Mollicute primer sequences | Next | — |
 | Compile Fredricks BV primer sequences | Next | — |
