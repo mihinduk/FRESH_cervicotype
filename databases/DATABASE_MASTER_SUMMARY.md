@@ -172,16 +172,29 @@ Use the QIIME2 classifier or RDP trained model. Do NOT use 16S-trained classifie
 
 **Purpose:** Targeted qPCR for M. genitalium, M. hominis, U. parvum, U. urealyticum — invisible to cpn60 and underdetected by 16S.
 
-**Status:** NOT YET SET UP — Step 1e
+**Status:** COMPLETE
 
-### Planned targets
+### Key files
 
-| Target | Gene | Primer source |
-|--------|------|---------------|
-| M. genitalium | MgPa adhesin | Jensen et al. |
-| M. hominis | 16S rRNA species-specific | Multiple validated |
-| U. parvum | ureC | Kong et al. 2000 |
-| U. urealyticum | ureC | Kong et al. 2000 |
+| File | Path | Contents |
+|------|------|----------|
+| Primer sequences | `mollicute_primers/primer_sequences.tsv` | 4 targets with primer/probe seqs, references |
+| Documentation | `mollicute_primers/DATABASE_SUMMARY.md` | Full details |
+
+### Targets
+
+| Target | Gene | Amplicon | SA prevalence |
+|--------|------|----------|---------------|
+| M. genitalium | MgPa adhesin | 78 bp TaqMan | ~10% in women |
+| M. hominis | 16S rRNA species-specific | ~270 bp | 81% in HIV+ SA women |
+| U. parvum | ureC | ~100 bp TaqMan | 77% in SA HIV+ women |
+| U. urealyticum | ureC | ~100 bp TaqMan | Less common |
+
+### Limitations
+
+- Primers from published literature, not independently validated by us
+- No SA-specific Mollicute primer validation published
+- In silico specificity check recommended before wet lab use
 
 ---
 
@@ -189,7 +202,30 @@ Use the QIIME2 classifier or RDP trained model. Do NOT use 16S-trained classifie
 
 **Purpose:** Targeted qPCR for BV-associated taxa: BVAB1, BVAB2, Megasphaera type 1, Fannyhessea vaginae.
 
-**Status:** NOT YET SET UP — Step 1f
+**Status:** COMPLETE
+
+### Key files
+
+| File | Path | Contents |
+|------|------|----------|
+| Primer sequences | `fredricks_bv_primers/primer_sequences.tsv` | 4 targets with primer seqs, references |
+| Documentation | `fredricks_bv_primers/DATABASE_SUMMARY.md` | Full details incl. diagnostic performance |
+
+### Targets
+
+| Target | Amplicon | Diagnostic value |
+|--------|----------|-----------------|
+| BVAB1 | 95 bp | Strongly associated with BV and inflammation |
+| BVAB2 | 100 bp | Best single BV marker |
+| Megasphaera type 1 | 121 bp | Distinguishes type 1 from type 2 |
+| Fannyhessea vaginae | 120 bp | Key BV indicator |
+
+Best combination: BVAB2 OR Megasphaera type 1 = 98.8% sensitivity, 93.7% specificity.
+
+### Limitations
+
+- Designed/validated on US populations — SA recalibration needed
+- In silico specificity check against SA 16S sequences recommended
 
 ---
 
@@ -226,5 +262,6 @@ Use the QIIME2 classifier or RDP trained model. Do NOT use 16S-trained classifie
 | Contact Hill lab for cpnDB\_nr\_vag + VOGUE reference | Medium | Scott approval |
 | Set up 16S SILVA + VIRGO2 | ~~Next~~ **DONE** | Classifiers downloaded, VIRGO2 cloned, DB pending Ravel lab |
 | Obtain VIRGO2 database files | High | Contact Michael France / Ravel lab for Dropbox link |
-| Compile Mollicute primer sequences | Next | — |
-| Compile Fredricks BV primer sequences | Next | — |
+| Compile Mollicute primer sequences | ~~Next~~ **DONE** | 4 targets compiled with sequences and references |
+| Compile Fredricks BV primer sequences | ~~Next~~ **DONE** | 4 targets compiled with sequences and references |
+| Download validation datasets from SRA | **Next** | Step 1g |
